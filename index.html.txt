@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PySpark Mastery 7-Day Playlist</title>
+    <style>
+        :root {
+            --bg-color: #0f0f0f;
+            --card-bg: #1f1f1f;
+            --text-color: #f1f1f1;
+            --accent-color: #ff0000;
+            --text-muted: #aaa;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: var(--text-color);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        .section-header {
+            margin-top: 30px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.4rem;
+        }
+        .playlist-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            border-left: 5px solid #333;
+        }
+        .playlist-item.lab {
+            border-left-color: #00aaff;
+        }
+        .playlist-item.opt {
+            border-left-color: #00ff66;
+        }
+        .item-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .badge-teach { background-color: var(--accent-color); color: white; }
+        .badge-lab { background-color: #00aaff; color: black; }
+        .badge-opt { background-color: #00ff66; color: black; }
+        
+        .desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        .video-btn {
+            align-self: flex-start;
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .video-btn:hover {
+            background-color: var(--accent-color);
+        }
+        code {
+            background-color: #111;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🎓 PySpark Ultimate 7-Day Data Engineering Playlist</h1>
+    <p style="text-align: center; color: var(--text-muted);">A structured track covering conceptual models, coding labs, and cluster optimization techniques.</p>
+
+    <!-- PHASE 1 -->
+    <div class="section-header">🎬 Phase 1: Core Fundamentals & Streaming Essentials (Days 1 & 2)</div>
+    
+    <div class="playlist-item">
+        <div><span class="badge badge-teach">Teaching</span></div>
+        <div class="item-title">PySpark Architecture & DataFrame Operations Masterclass</div>
+        <div class="desc">Deep dive into Driver vs. Worker nodes, Lazy Evaluation, Transformations vs. Actions, and Spark's execution engine.</div>
+        <a href="https://youtube.com" target="_blank" class="video-btn">▶ Watch Lecture</a>
+    </div>
+
+    <div class="playlist-item lab">
+        <div><span class="badge badge-lab">Lab Assignment</span></div>
+        <div class="item-title">Lab 1: Building End-to-End JSON Data Pipelines</div>
+        <div class="desc">Practice loading complex, multi-line nested JSON files, flattening schemas with <code>explode()</code>, and writing clean data to <code>Parquet</code> storage formats.</div>
+        <a href="https://youtube.com" target="_blank" class="video-btn">▶ Start Lab Video</a>
+    </div>
+
+    <!-- PHASE 2 -->
+    <div class="section-header">🗄️ Phase 2: Relational Data Modeling Changes (Days 3 & 4)</div>
+    
+    <div class="playlist-item">
+        <div><span class="badge badge-teach">Teaching</span></div>
+        <div class="item-title">Normalization vs. Denormalization in Distributed Environments</div>
+        <div class="desc">Learn the theoretical and engineering mechanics of breaking apart 3rd Normal Form structures to generate highly flattened analytical data lakes.</div>
+        <a href="https://youtube.com" target="_blank" class="video-btn">▶ Watch Lecture</a>
+    </div>
+
+    <div class="playlist-item lab">
+        <div><span class="badge badge-lab">Lab Assignment</span></div>
+        <div class="item-title">Lab 2: Implementing Massive Table Joins & Flattening Operations</div>
+        <div class="desc">Build multi-table relational schema queries using PySpark DataFrame APIs to assemble a centralized, high-performance denormalized analytics warehouse layer.</div>
+        <a href="https://youtube.com" target="_blank" class="video-btn">▶ Start Lab Video</a>
+    </div>
+
+    <!-- PHASE 3 -->
+    <div class="section-header">⚡ Phase 3: Production Tuning & Optimization (Days 5 - 7)</div>
+    
+    <div class="playlist-item opt">
+        <div><span class="badge badge-opt">Optimization Practice</span></div>
+        <div class="item-title">Eliminating Data Shuffling Bottlenecks & Network Overhead</div>
+        <div class="desc">Comprehensive deep-dive explaining Sort-Merge Joins, Broadcast Hash Joins, Adaptive Query Execution (AQE), and Spark Catalyst Physical Execution Optimization layouts.</div>
+        <a href="https://youtube.com" target="_blank" class="video-btn">▶ Watch Tuning Guide</a>
+    </div>
+
+    <div class="playlist-item lab">
+        <div><span class="badge badge-lab">Lab Assignment</span></div>
+        <div class="item-title">Lab 3: Mitigating Heavy Data Skew with Key Salting Techniques</div>
+        <div class="desc">Identify straggler tasks and skewed row distributions inside the Spark UI. Write a custom Python script to systematically inject random keys into skewed columns to maximize parallel thread scaling.</div>
+        <a href="https://youtube.com" target="_blank" class="video-btn">▶ Start Advanced Lab</a>
+    </div>
+
+</div>
+
+</body>
+</html>
